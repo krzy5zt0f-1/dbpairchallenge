@@ -13,4 +13,7 @@ I would like to be able to see a list of my bookmarks.
 ```
 - Domain model generated: 
 
+![](domain_model.png)
+
+
 ----
