@@ -23,16 +23,13 @@
       },
       "/Users/krzysztofkasprzak/Projects/bookmarksmanager/lib/bookmark.rb": {
         "lines": [
-          null,
+          1,
           1,
           null,
           1,
-          null,
           3,
-          null,
-          null,
-          null,
-          null,
+          3,
+          12,
           null,
           null
         ]
@@ -86,6 +83,6 @@
         ]
       }
     },
-    "timestamp": 1604331952
+    "timestamp": 1604339974
   }
 }
