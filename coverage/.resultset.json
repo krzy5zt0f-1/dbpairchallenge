@@ -4,14 +4,74 @@
       "/Users/krzysztofkasprzak/Projects/bookmarksmanager/app.rb": {
         "lines": [
           1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          1,
+          null
+        ]
+      },
+      "/Users/krzysztofkasprzak/Projects/bookmarksmanager/lib/bookmark.rb": {
+        "lines": [
           null,
           1,
           null,
           1,
+          null,
+          3,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/krzysztofkasprzak/Projects/bookmarksmanager/spec/bookmark_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          2,
+          2,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/krzysztofkasprzak/Projects/bookmarksmanager/spec/features/bookmarks_index_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
           1,
           null,
           null,
           1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
           null
         ]
       },
@@ -26,6 +86,6 @@
         ]
       }
     },
-    "timestamp": 1604329368
+    "timestamp": 1604331952
   }
 }
