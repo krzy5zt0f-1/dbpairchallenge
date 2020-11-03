@@ -7,15 +7,15 @@ feature "Check the '/bookmarks' index path"  do
     expect(page).to have_current_path('/bookmarks')
   end
   scenario "go to '/bookmarks' and use text from index.erb" do
-    Bookmark.add('http://www.makersacademy.com')
-    Bookmark.add('http://www.destroyallsoftware.com')
-    Bookmark.add('http://www.google.com')
-    
+    Bookmark.add('http://www.makersacademy.com', 'title 1')
+    Bookmark.add('http://www.destroyallsoftware.com', 'title 2')
+    Bookmark.add('http://www.google.com', 'title 3')
+
     visit('/bookmarks')
 
-    expect(page).to have_content("http://www.makersacademy.com")
-    expect(page).to have_content("http://www.destroyallsoftware.com")
-    expect(page).to have_content("http://www.google.com")
+    expect(page).to have_content("title 1")
+    expect(page).to have_content("title 2")
+    expect(page).to have_content("title 3")
 
   end
 end

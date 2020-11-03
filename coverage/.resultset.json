@@ -39,7 +39,7 @@
           0,
           0,
           null,
-          35,
+          23,
           null,
           null,
           1,
@@ -66,12 +66,9 @@
           1,
           1,
           1,
-          1,
-          1,
           null,
           1,
-          1,
-          1,
+          null,
           null,
           null,
           1,
@@ -85,6 +82,7 @@
       },
       "/Users/krzysztofkasprzak/Projects/bookmarksmanager/spec/features/add_bookmark_spec.rb": {
         "lines": [
+          1,
           1,
           1,
           1,
@@ -131,6 +129,6 @@
         ]
       }
     },
-    "timestamp": 1604415350
+    "timestamp": 1604418498
   }
 }
