@@ -14,10 +14,20 @@ describe Bookmark do
 
     end
   end
+
   describe '#add' do
     it 'adds a bookmark' do
       subject.add('Swizel was here', 'with a title')
       expect(subject.all).to include ['Swizel was here', 'with a title']
     end
   end
+  describe '#remove' do
+    it 'removes a bookmark' do
+      subject.add('Swizel was here', 'with a title')
+      expect(subject.all).to include ['Swizel was here', 'with a title'] #can be removed lag
+      subject.remove('with a title')
+      expect(subject.all).not_to include ['Swizel was here', 'with a title']
+    end
+  end
+
 end

@@ -7,9 +7,9 @@ class BookmarkManager < Sinatra::Base
     "Hello World!"
   end
 
-  get '/' do 
+  get '/' do
     redirect '/bookmarks'
-  end 
+  end
 
   get '/bookmarks' do
     @bookmarks = Bookmark.all
@@ -21,9 +21,10 @@ class BookmarkManager < Sinatra::Base
     redirect '/bookmarks'
   end
 
-  post '/delete' do 
-    "Hi"
-  end 
+  post '/delete' do
+    Bookmark.remove(params[:link_to_delete])
+    redirect '/bookmarks'
+  end
 
 run! if app_file == $0
 end
