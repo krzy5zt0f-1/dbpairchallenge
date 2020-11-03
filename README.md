@@ -26,3 +26,15 @@ For this challenge, we were required to set up a new database. The project now i
 3. creating a database for the project by: `CREATE DATABASE bookmark_manager;` in `psql` and a test database by: `CREATE DATABASE "bookmark_manager_test";`
 4. Connect to database with `psql` by: `\c bookmark_manager;`
 5. Finally, run `01_create_bookmarks_table.sql` in `db/migration` and `02_create_bookmarks_table_test.sql` in `bookmark_manager_test`.
+
+---
+## Challenge 10
+
+- User story 
+
+```
+As a user 
+So I can have multiple bookmarks
+I'd like to be able of add new bookmarks
+
+```

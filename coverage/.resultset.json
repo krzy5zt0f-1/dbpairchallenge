@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/krzysztofkasprzak/Projects/bookmarksmanager/app.rb": {
+      "/Users/swizelcardozo/Projects/week_6/dbpairchallenge/app.rb": {
         "lines": [
           1,
           1,
@@ -13,38 +13,47 @@
           null,
           null,
           1,
-          2,
-          2,
+          3,
+          3,
           null,
           null,
           1,
           null
         ]
       },
-      "/Users/krzysztofkasprzak/Projects/bookmarksmanager/lib/bookmark.rb": {
+      "/Users/swizelcardozo/Projects/week_6/dbpairchallenge/lib/bookmark.rb": {
         "lines": [
           1,
           1,
           null,
           1,
-          3,
-          3,
-          3,
+          5,
+          5,
+          5,
           null,
           0,
           0,
           null,
-          15,
+          27,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          0,
+          null,
+          1,
           null,
           null
         ]
       },
-      "/Users/krzysztofkasprzak/Projects/bookmarksmanager/spec/bookmark_spec.rb": {
+      "/Users/swizelcardozo/Projects/week_6/dbpairchallenge/spec/bookmark_spec.rb": {
         "lines": [
           1,
           null,
           1,
-          2,
+          3,
           2,
           null,
           1,
@@ -55,6 +64,12 @@
           1,
           1,
           null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
           1,
           1,
           1,
@@ -63,7 +78,19 @@
           null
         ]
       },
-      "/Users/krzysztofkasprzak/Projects/bookmarksmanager/spec/features/bookmarks_index_spec.rb": {
+      "/Users/swizelcardozo/Projects/week_6/dbpairchallenge/spec/features/add_bookmark_spec.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/swizelcardozo/Projects/week_6/dbpairchallenge/spec/features/bookmarks_index_spec.rb": {
         "lines": [
           1,
           null,
@@ -90,7 +117,7 @@
           null
         ]
       },
-      "/Users/krzysztofkasprzak/Projects/bookmarksmanager/spec/features/hello_test_spec.rb": {
+      "/Users/swizelcardozo/Projects/week_6/dbpairchallenge/spec/features/hello_test_spec.rb": {
         "lines": [
           1,
           1,
@@ -101,6 +128,6 @@
         ]
       }
     },
-    "timestamp": 1604400656
+    "timestamp": 1604414455
   }
 }

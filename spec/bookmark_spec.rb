@@ -17,4 +17,10 @@ describe Bookmark do
       expect(bookmarks).to include("http://www.google.com")
     end
   end
+  describe '#add' do 
+    it 'adds a bookmark' do 
+      subject.add('Swizel was here')
+      expect(subject.all).to include 'Swizel was here'
+    end 
+  end 
 end
