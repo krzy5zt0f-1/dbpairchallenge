@@ -4,6 +4,9 @@
       <a href="<%= bookmark[0] %>">
         <%= bookmark[1] %>
       </a>
+      <form action='/delete' method="post" style="float:left">
+        <input type="submit" value="x"/>
+      </form>
     </li>
   <% end %>
 </ul>
