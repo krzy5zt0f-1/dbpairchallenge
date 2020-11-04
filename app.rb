@@ -2,6 +2,11 @@ require 'sinatra/base'
 require './lib/bookmark'
 
 class BookmarkManager < Sinatra::Base
+  ['/bookmarks', '/update', '/update_post', '/updated'].each do |path|
+    before path do
+    @bookmarks = Bookmark.all
+    end
+  end
 
   get '/hello' do
     "Hello World!"
@@ -12,7 +17,6 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/bookmarks' do
-    @bookmarks = Bookmark.all
     erb(:index)
   end
 
@@ -24,6 +28,20 @@ class BookmarkManager < Sinatra::Base
   post '/delete' do
     Bookmark.remove(params[:link_to_delete])
     redirect '/bookmarks'
+  end
+
+  get '/update' do
+    erb(:edit)
+  end
+
+  get '/update_post' do
+    @data = params[:link_to_update]
+     erb(:edit_post)
+  end
+
+  post '/updated' do
+    Bookmark.update(params[:url], params[:title], params[:id])
+    redirect '/update'
   end
 
 run! if app_file == $0

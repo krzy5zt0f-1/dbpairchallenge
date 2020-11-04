@@ -15,7 +15,8 @@ class Bookmark
     connetion_choice.exec("DELETE FROM bookmarks WHERE id='#{id}'")
   end
 
-  def self.updatde(id)
+  def self.update(url, title, id)
+    connetion_choice.exec("UPDATE bookmarks SET url='#{url}', title='#{title}' WHERE id='#{id}'")
   end
 
   private
