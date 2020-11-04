@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require './lib/bookmark'
+require './lib/setup'
 
 class BookmarkManager < Sinatra::Base
   ['/bookmarks', '/update', '/update_post', '/updated'].each do |path|
