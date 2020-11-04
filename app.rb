@@ -1,8 +1,12 @@
 require 'sinatra/base'
 require './lib/bookmark'
 require './lib/setup'
+require 'sinatra/flash'
 
 class BookmarkManager < Sinatra::Base
+  enable :sessions
+  register Sinatra::Flash
+
   ['/bookmarks', '/update', '/update_post', '/updated'].each do |path|
     before path do
     @bookmarks = Bookmark.all

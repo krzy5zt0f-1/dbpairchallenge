@@ -6,8 +6,12 @@
           1,
           1,
           1,
+          1,
           null,
           1,
+          1,
+          1,
+          null,
           1,
           4,
           14,
@@ -62,12 +66,18 @@
           null,
           1,
           null,
+          1,
+          null,
           21,
           38,
           null,
           null,
           1,
           9,
+          null,
+          null,
+          1,
+          2,
           null,
           null,
           1,
@@ -116,7 +126,7 @@
           1,
           null,
           1,
-          5,
+          7,
           2,
           null,
           1,
@@ -155,6 +165,15 @@
           1,
           1,
           1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
           1,
           1,
           null,
@@ -246,6 +265,11 @@
           null
         ]
       },
+      "/Users/krzysztofkasprzak/Projects/bookmarksmanager/spec/features/error_for_invalid_link_spec.rb": {
+        "lines": [
+
+        ]
+      },
       "/Users/krzysztofkasprzak/Projects/bookmarksmanager/spec/features/hello_test_spec.rb": {
         "lines": [
           1,
@@ -275,6 +299,6 @@
         ]
       }
     },
-    "timestamp": 1604512181
+    "timestamp": 1604518197
   }
 }

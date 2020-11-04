@@ -1,6 +1,6 @@
 <form action='/updated' method='post'>
-    <input type="text" name="url" value="<%= @data.split('|')[0] %>" require="required"/>
-    <input type="text" name="title" value="<%= @data.split('|')[1] %>" require="required"/>
+    <input type="text" name="url" value="<%= @data.split('|')[0] %>" required="required"/>
+    <input type="text" name="title" value="<%= @data.split('|')[1] %>" required="required"/>
     <input type="hidden" name="id" value="<%= @data.split('|')[2] %>">
     <input type="submit" value="Edit"/>
 </form>

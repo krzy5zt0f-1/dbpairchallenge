@@ -1,5 +1,7 @@
 require 'pg'
+require 'uri'
 require_relative 'connection'
+
 class Bookmark
 
   def self.all
@@ -18,5 +20,9 @@ class Bookmark
 
   def self.update(url, title, id)
     DatabaseConnection.query("UPDATE bookmarks SET url='#{url}', title='#{title}' WHERE id='#{id}'")
+  end
+
+  def self.validate(url)
+    url =~ /\A#{URI::regexp(['http', 'https'])}\z/
   end
 end

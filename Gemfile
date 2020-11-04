@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'sinatra-flash'
 gem 'sinatra'
 gem 'pg'
 group :test do

@@ -44,4 +44,13 @@ describe Bookmark do
       expect(subject.all).to include ['Shes no more', 'title changed', '2']
     end
   end
+
+  describe '#validate' do
+    it "returns nil if page does not exist" do
+      expect(subject.validate("chuj")).to eq nil
+    end
+    it "returns o if page exists" do
+      expect(subject.validate("http://rps1s.herokuapp.com/")).to eq 0
+    end
+  end
 end
