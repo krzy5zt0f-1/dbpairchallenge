@@ -9,7 +9,7 @@ class Bookmark
       conn = PG.connect(:dbname => 'bookmark_manager') # connecting to database
       table  = conn.exec('SELECT * FROM bookmarks;') # within database, connecting to table
     end
-    table.map { |result| [result['url'], result['title']]}
+    table.map { |result| [result['url'], result['title'], result['id']]}
   end
 
   def self.add(url, title)
@@ -21,12 +21,12 @@ class Bookmark
     conn.exec("INSERT INTO bookmarks (url, title) VALUES('#{url}', '#{title}')")
   end
 
-  def self.remove(title)
+  def self.remove(id)
     if ENV['RACK_ENV'] == 'test'
       conn = PG.connect(:dbname => 'bookmark_manager_test') # connecting to database
     else
       conn = PG.connect(:dbname => 'bookmark_manager') # connecting to database
     end
-    conn.exec("DELETE FROM bookmarks WHERE title='#{title}'")
+    conn.exec("DELETE FROM bookmarks WHERE id='#{id}'")
   end
 end
