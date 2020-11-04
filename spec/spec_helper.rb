@@ -17,7 +17,7 @@ require File.join(File.dirname(__FILE__), '..', 'app.rb')
 Capybara.app = BookmarkManager
 
 RSpec.configure do |config|
-  config.before(:suite) do
+  config.before(:each) do
     set_up
   end
   config.after(:suite) do
