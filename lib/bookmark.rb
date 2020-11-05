@@ -7,7 +7,7 @@ class Bookmark
   def self.all
 
     table  = DatabaseConnection.query('SELECT * FROM bookmarks;') # within database, connecting to table
-    table.map { |result| [result['url'], result['title'], result['id']]}
+    table.map { |result| [result['url'], result['title'], result['id'], result['comment']]}
   end
 
   def self.add(url, title)
@@ -18,11 +18,15 @@ class Bookmark
     DatabaseConnection.query("DELETE FROM bookmarks WHERE id='#{id}'")
   end
 
-  def self.update(url, title, id)
-    DatabaseConnection.query("UPDATE bookmarks SET url='#{url}', title='#{title}' WHERE id='#{id}'")
+  def self.update(url, title, id, comment)
+    DatabaseConnection.query("UPDATE bookmarks SET url='#{url}', title='#{title}', comment='#{comment}' WHERE id='#{id}'")
   end
 
   def self.validate(url)
     url =~ /\A#{URI::regexp(['http', 'https'])}\z/
+  end
+
+  def self.comment(comment, id)
+    DatabaseConnection.query("UPDATE bookmarks SET comment='#{comment}' WHERE id='#{id}'")
   end
 end

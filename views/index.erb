@@ -5,6 +5,7 @@
         <label><a href="<%= bookmark[0] %>"><%= bookmark[1] %></a></label>
         <button name="link_to_delete" type="submit" value="<%= bookmark[2] %>">x</button>
       </form>
+      <p><%= bookmark[3] %></p>
     </li>
   <% end %>
 </ul>
@@ -17,8 +18,8 @@
 <% end %>
 
 <form action='/add' method='post'>
-    <input type="text" name="url" required="required"/>
-    <input type="text" name="title" required="required"/>
+    <input type="text" name="url" required="required" placeholder="url"/>
+    <input type="text" name="title" required="required" placeholder="title"/>
     <input type="submit" value="Add"/>
 </form>
 <form action='/update' method="get">

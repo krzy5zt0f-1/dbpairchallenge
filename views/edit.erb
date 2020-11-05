@@ -3,8 +3,9 @@
     <li>
       <form action='/update_post' method="get">
         <label><a href="<%= bookmark[0] %>"><%= bookmark[1] %></a></label>
-        <button name="link_to_update" type="submit" value="<%= bookmark[0] %>|<%= bookmark[1] %>|<%= bookmark[2] %>">edit</button>
+        <button name="link_to_update" type="submit" value="<%= bookmark[0] %>|<%= bookmark[1] %>|<%= bookmark[2] %>|<%= bookmark[3] %>">edit</button>
       </form>
+      <p><%= bookmark[3] %></p>
     </li>
   <% end %>
 </ul>

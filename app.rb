@@ -45,7 +45,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/updated' do
-    Bookmark.update(params[:url], params[:title], params[:id])
+    Bookmark.update(params[:url], params[:title], params[:id], params[:comment])
     redirect '/update'
   end
 
