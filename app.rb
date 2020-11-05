@@ -26,7 +26,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/add' do
-    Bookmark.add(params[:url], params[:title])
+    Bookmark.validate(params[:url]) == 0 ? Bookmark.add(params[:url], params[:title]) : flash[:notice] = "submit a valid URL."
     redirect '/bookmarks'
   end
 
