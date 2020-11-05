@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bcrypt'
 gem 'sinatra-flash'
 gem 'sinatra'
 gem 'pg'

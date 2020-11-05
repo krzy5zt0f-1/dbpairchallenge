@@ -2,6 +2,8 @@ require 'sinatra/base'
 require './lib/bookmark'
 require './lib/setup'
 require 'sinatra/flash'
+require './lib/user'
+
 
 class BookmarkManager < Sinatra::Base
   enable :sessions
@@ -18,10 +20,22 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/' do
+    redirect '/users/new'
+  end
+
+  get '/users/new' do
+    erb(:users_new)
+  end
+
+  post '/users' do
+    user = User.add(params[:email], params[:password])
+    session[:user_id] = user.id
     redirect '/bookmarks'
   end
 
+
   get '/bookmarks' do
+    @user = @user = User.find(session[:user_id])
     erb(:index)
   end
 
