@@ -33,6 +33,20 @@ class BookmarkManager < Sinatra::Base
     redirect '/bookmarks'
   end
 
+  get '/sessions/new' do
+    erb(:sessions_new)
+  end
+
+  post '/sessions' do
+    user = User.authenticate(params[:email], params[:password])
+    if user == nil
+      flash[:notice] = 'Please check your email or password.'
+    redirect('/sessions/new')
+    else
+      session[:user_id] = user.id
+      redirect('/bookmarks')
+    end
+  end
 
   get '/bookmarks' do
     @user = @user = User.find(session[:user_id])
